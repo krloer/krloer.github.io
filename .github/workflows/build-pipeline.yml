@@ -52,16 +52,13 @@ jobs:
           LAST: Eriksen
           SECRET: ${{secrets.PASSWORD}}
       # Step 2: Add deploy to Github pages here! Hot tip - The solution is in the Readme
-  # docker:
-  #   steps:
-  #     - name: Secrets
-  #       uses: docker/login-action@v1
-  #       env:
-  #         SECRE
-  #     - name: idfk
-  #       uses: docker/metadata-action@v3
-
-  #     - name: push
-  #       uses: docker/metadata-action@v2
-  #       run: docker push krloer/acntech:tagname
+  docker:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses:
+        with:
+          DOCKER_USERNAME = ${{secrets.DOCKER_USERNAME}}
+          DOCKER_PASSWORD = ${{secrets.DOCKER_PASSWORD}}
+        
     
