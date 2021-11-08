@@ -43,10 +43,11 @@ jobs:
           branch: gh-pages
           folder: dist
       - name: Environment Variables
-        run: echo "Hello, my name is $FIRST $MIDDLE $LAST!!! :)"
+        run: echo "Hello, my name is $FIRST $MIDDLE $LAST, and this is my $SECRET!! :O"
         env:
           FIRST: Kristoffer
           MIDDLE: Longva
           LAST: Eriksen
+          SECRET: ${{secrets.PASSWORD}}
       # Step 2: Add deploy to Github pages here! Hot tip - The solution is in the Readme
     
