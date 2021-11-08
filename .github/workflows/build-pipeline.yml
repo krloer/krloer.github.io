@@ -42,7 +42,6 @@ jobs:
         with:
           branch: gh-pages
           folder: dist
-    steps:
       - name: Environment Variables
         run: echo "Hello, my name is $FIRST $MIDDLE $LAST!!! :)"
         env:
