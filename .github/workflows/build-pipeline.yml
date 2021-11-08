@@ -42,4 +42,12 @@ jobs:
         with:
           branch: gh-pages
           folder: dist
+    steps:
+      - name: Environment Variables
+        run: echo "Hello, my name is $FIRST $MIDDLE $LAST!!! :)"
+        env:
+          FIRST: Kristoffer
+          MIDDLE: Longva
+          LAST: Eriksen
       # Step 2: Add deploy to Github pages here! Hot tip - The solution is in the Readme
+    
